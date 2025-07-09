@@ -1,16 +1,13 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const sectionVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: {
-      staggerChildren: 0.3,
-      duration: 0.8,
-    },
+    transition: { staggerChildren: 0.3, duration: 0.8 },
   },
 };
 
@@ -24,11 +21,10 @@ const imageVariants = {
   visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
 };
 
-export const AboutSection = () => {
+export const QuoteSection = () => {
   return (
     <section 
       className="py-24" 
-      id="studio"
       style={{ backgroundColor: 'var(--dark-bg)', color: 'var(--text-light)' }}
     >
       <div className="container">
@@ -40,23 +36,24 @@ export const AboutSection = () => {
           variants={sectionVariants}
         >
           <motion.div className="flex-1" variants={textVariants}>
-            <h3 className="font-serif text-3xl mb-4">
-              Studio Legale Jessica Fici
-            </h3>
-            <div className="accent-line"></div>
-            <p className="mt-6 text-lg">
-              Studio Legale Jessica Fici è uno studio legale indipendente specializzato in diritto
-              d'impresa e societario, fondato sull'impegno per l'eccellenza,
-              l'integrità e la tutela degli interessi dei clienti.
-            </p>
+            <div className="flex items-start">
+              <div className="w-1 h-36 bg-[var(--accent-color)] mr-8 mt-2 flex-shrink-0"></div>
+              <blockquote
+                className="font-serif text-4xl md:text-5xl font-normal text-white"
+              >
+                "Non aspiriamo ad essere i più grandi.
+                <br />
+                Solo i migliori"
+              </blockquote>
+            </div>
           </motion.div>
           
           <motion.div className="flex-1" variants={imageVariants}>
             <Image
-              src="https://images.unsplash.com/photo-1569949381669-ecf31ae8e613?q=80&w=1974&auto=format&fit=crop"
-              alt="Dettaglio architettonico di un arco"
+              src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2071&auto=format&fit=crop"
+              alt="Scalinata in bianco e nero di un palazzo storico"
               width={600}
-              height={400}
+              height={750}
               className="w-full h-auto grayscale"
             />
           </motion.div>
@@ -64,4 +61,4 @@ export const AboutSection = () => {
       </div>
     </section>
   );
-};
+}; 

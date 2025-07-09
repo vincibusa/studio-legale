@@ -1,22 +1,19 @@
-import { Header } from "@/components/home/Header";
-import { HeroSection } from "@/components/home/HeroSection";
-import { ServiceSection } from "@/components/home/ServiceSection";
 import { AboutSection } from "@/components/home/AboutSection";
-import { ContactSection } from "@/components/home/ContactSection";
-import { Footer } from "@/components/home/Footer";
+import { MissionSection } from "@/components/home/MissionSection";
+import { ProfessionistiSection } from "@/components/home/ProfessionistiSection";
+import { QuoteSection } from "@/components/home/QuoteSection";
+import { ServiceSection } from "@/components/home/ServiceSection";
+import { HeroSection } from "@/components/home/HeroSection";
 
 export default function Home() {
   return (
     <>
-      <Header />
-      <main>
-        <HeroSection />
-
-        <AboutSection />
-        <ServiceSection />
-        <ContactSection />
-      </main>
-      <Footer />
+      <HeroSection />
+      <AboutSection />
+      <MissionSection />
+      <ServiceSection />
+      <ProfessionistiSection />
+      <QuoteSection />
     </>
   );
 }

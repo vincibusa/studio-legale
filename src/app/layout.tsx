@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Montserrat } from "next/font/google";
 import "./globals.css";
+import { Header } from "@/components/home/Header";
+import { Footer } from "@/components/home/Footer";
 
 const cormorantGaramond = Cormorant_Garamond({
   variable: "--font-cormorant-garamond",
@@ -15,7 +17,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Studio Legale Rossi",
+  title: "Studio Legale Jessica Fici",
   description: "Tutela e consulenza legale con professionalità e dedizione. Assistenza legale specialistica per privati e aziende.",
 };
 
@@ -27,9 +29,11 @@ export default function RootLayout({
   return (
     <html lang="it">
       <body
-        className={`${cormorantGaramond.variable} ${montserrat.variable} antialiased font-sans bg-stone-50 text-stone-800`}
+        className={`${cormorantGaramond.variable} ${montserrat.variable} antialiased font-sans`}
       >
-        {children}
+        <Header />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

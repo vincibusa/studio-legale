@@ -1,56 +1,74 @@
 import Link from "next/link";
 import { navLinks } from "./links";
-import { Facebook, Twitter, Linkedin } from 'lucide-react';
 
 export const Footer = () => {
   return (
-    <footer className="bg-stone-900 text-stone-300">
-      <div className="container mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          <div className="lg:col-span-1">
-            <h3 className="text-xl font-semibold font-serif text-white">Studio Legale Rossi</h3>
-            <p className="text-sm text-stone-400 mt-2">
-              Professionalità e dedizione al vostro servizio.
+    <footer 
+      className="py-16"
+      style={{ 
+        backgroundColor: 'var(--dark-bg)', 
+        color: 'var(--text-light)',
+        borderTop: '1px solid #444'
+      }}
+    >
+      <div className="container">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-10">
+          {/* Column 1: Logo & Tagline */}
+          <div className="md:col-span-1">
+            <Link href="/" className="font-serif text-2xl font-bold text-white mb-4 block">
+              Studio Legale Jessica Fici
+            </Link>
+            <p className="text-gray-400 text-sm">
+              L'eccellenza legale per l'eccellenza aziendale.
             </p>
-            <div className="flex mt-4 space-x-4">
-              <Link href="#" className="text-stone-400 hover:text-white"><Facebook size={20} /></Link>
-              <Link href="#" className="text-stone-400 hover:text-white"><Twitter size={20} /></Link>
-              <Link href="#" className="text-stone-400 hover:text-white"><Linkedin size={20} /></Link>
-            </div>
           </div>
+
+          {/* Column 2: Navigation */}
           <div>
-            <h4 className="text-lg font-semibold font-serif text-white">Link Rapidi</h4>
-            <ul className="mt-4 space-y-2">
+            <h4 className="font-bold text-lg text-white mb-4">Navigazione</h4>
+            <ul className="space-y-2">
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-stone-400 hover:text-white transition-colors">
+                  <Link href={link.href} className="text-gray-400 hover:text-white transition-colors">
                     {link.label}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
+
+          {/* Column 3: Contacts */}
           <div>
-            <h4 className="text-lg font-semibold font-serif text-white">Contatti</h4>
-            <ul className="mt-4 space-y-2 text-stone-400">
-              <li>Via Roma, 123 - 00100 Roma</li>
-              <li>info@studiolegalerossi.it</li>
-              <li>+39 012 345 6789</li>
-            </ul>
+            <h4 className="font-bold text-lg text-white mb-4">Contatti</h4>
+            <address className="not-italic text-gray-400 space-y-2 text-sm">
+              <p>Via Roma, 123<br />00100 Roma, Italia</p>
+              <p>info@vincentipartners.it</p>
+              <p>+39 012 345 6789</p>
+            </address>
           </div>
-           <div>
-            <h4 className="text-lg font-semibold font-serif text-white">Orari</h4>
-            <ul className="mt-4 space-y-2 text-stone-400">
-              <li>Lunedì - Venerdì</li>
-              <li>9:00 - 18:00</li>
-              <li>Sabato e Domenica: Chiuso</li>
-            </ul>
+
+          {/* Column 4: Social */}
+          <div>
+            <h4 className="font-bold text-lg text-white mb-4">Seguici</h4>
+             <Link 
+              href="https://www.linkedin.com/company/vincenti-partners" 
+              className="text-white border border-white px-4 py-2 text-sm font-bold transition-all duration-300 hover:bg-white hover:text-[var(--dark-bg)] inline-block"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </Link>
           </div>
         </div>
-        <div className="mt-10 border-t border-stone-700 pt-6 text-center text-sm text-stone-500">
-           <p>
-              © {new Date().getFullYear()} Studio Legale Rossi. Tutti i diritti riservati. P.IVA 12345678901
-            </p>
+        
+        <div className="border-t border-gray-700 pt-6 mt-10">
+          <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+            <p>© 2024 Studio Legale Jessica Fici - P.Iva 05443340822</p>
+            <div className="flex gap-4 mt-4 md:mt-0">
+              <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+              <Link href="/cookie-policy" className="hover:text-white transition-colors">Cookie Policy</Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

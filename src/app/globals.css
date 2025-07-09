@@ -1,7 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
 @import "tailwindcss";
+@import 'leaflet/dist/leaflet.css';
+
+/* --- Impostazioni Globali e Variabili --- */
+:root {
+    --dark-bg: #222222;
+    --light-bg: #f4f4f4;
+    --text-dark: #333;
+    --text-light: #ffffff;
+    --accent-color: #a42c38;
+    --font-serif: 'Lora', serif;
+    --font-sans: 'Poppins', sans-serif;
+}
 
 @layer base {
   html {
     scroll-behavior: smooth;
+    font-family: var(--font-sans);
+  }
+  
+  body {
+    font-family: var(--font-sans);
+    color: var(--text-light);
+    background-color: var(--dark-bg);
+    margin: 0;
+    padding: 0;
+  }
+
+  h1, h2, h3, h4, blockquote {
+    font-family: var(--font-serif);
+    font-weight: 400;
+  }
+}
+
+@layer utilities {
+  .dark-bg { 
+    background-color: var(--dark-bg); 
+    color: var(--text-light); 
+  }
+  
+  .light-bg { 
+    background-color: var(--light-bg); 
+    color: var(--text-dark); 
+  }
+
+  .accent-line {
+    width: 60px;
+    height: 2px;
+    background-color: var(--accent-color);
+    margin: 15px 0;
+  }
+
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* For hiding scrollbars */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  .service-progress {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .service-progress > [data-slot="progress-indicator"] {
+    background-color: var(--accent-color);
   }
 }
