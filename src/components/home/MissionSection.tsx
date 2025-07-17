@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+
 
 const sectionVariants = {
   hidden: { opacity: 0 },
@@ -57,13 +57,7 @@ export const MissionSection = () => {
               caratterizza lo studio consente di offrire soluzioni su misura,
               pensate per le specifiche esigenze del cliente.
             </p>
-            <Link 
-              href="#contatti" 
-              className="inline-flex items-center gap-2 text-[var(--accent-color)] font-bold tracking-wider mt-8 group"
-            >
-              LO STUDIO
-              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-            </Link>
+
           </motion.div>
         </motion.div>
       </div>

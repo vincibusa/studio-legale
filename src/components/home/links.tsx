@@ -1,5 +1,5 @@
 import React from "react";
-import { Building, Users, Briefcase, Mail } from "lucide-react";
+import { Building, Briefcase, Mail } from "lucide-react";
 
 export type NavLink = {
   href: string;
@@ -18,11 +18,7 @@ export const navLinks: NavLink[] = [
     label: "Aree di attività",
     icon: <Briefcase className="h-5 w-5" />,
   },
-  {
-    href: "/#professionisti",
-    label: "Professionisti",
-    icon: <Users className="h-5 w-5" />,
-  },
+
 
   {
     href: "/contatti",

@@ -45,19 +45,17 @@ export const AboutSection = () => {
             </h3>
             <div className="accent-line"></div>
             <p className="mt-6 text-lg">
-              Studio Legale Jessica Fici è uno studio legale indipendente specializzato in diritto
-              d'impresa e societario, fondato sull'impegno per l'eccellenza,
-              l'integrità e la tutela degli interessi dei clienti.
+            L'Avv. Jessica Fici esercita la propria attività professionale svolgendo attività di consulenza, assistenza e rappresentanza legale in favore di persone fisiche, società, enti o associazioni in ambito giudiziale e stragiudiziale, oltre che nei procedimenti di mediazione, (essendo essa stessa un mediatore professionista, nonché negli ultimi anni ha sviluppato una specializzazione nel diritto della cittadinanza iure sanguinis.
             </p>
           </motion.div>
           
           <motion.div className="flex-1" variants={imageVariants}>
             <Image
-              src="https://images.unsplash.com/photo-1569949381669-ecf31ae8e613?q=80&w=1974&auto=format&fit=crop"
+              src="/jessica.jpeg"
               alt="Dettaglio architettonico di un arco"
               width={600}
               height={400}
-              className="w-full h-auto grayscale"
+              className="w-full h-auto"
             />
           </motion.div>
         </motion.div>

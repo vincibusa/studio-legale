@@ -14,8 +14,10 @@ export const ContactSection = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
+          <div className="flex flex-col items-center">
           <h2 className="font-serif text-4xl mb-4">Contatto</h2>
-          <div className="accent-line mx-auto"></div>
+          <div className="accent-line mx-auto w-1/2"></div>
+          </div>
           <p className="max-w-2xl mx-auto my-6 text-lg">
             Siamo a vostra disposizione per qualsiasi chiarimento o per fissare un appuntamento.
           </p>
