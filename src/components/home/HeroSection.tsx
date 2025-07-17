@@ -52,13 +52,13 @@ export const HeroSection = () => {
           className="text-lg md:text-xl text-gray-200 mb-4"
           variants={itemVariants}
         >
-          L'eccellenza legale per l'eccellenza aziendale
+          La vostra tutela legale è
         </motion.p>
         <motion.h1
           className="font-serif text-6xl md:text-8xl font-normal text-white"
           variants={itemVariants}
         >
-          Al servizio dell'impresa
+          La nostra priorità
         </motion.h1>
       </motion.div>
       

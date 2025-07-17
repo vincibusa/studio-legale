@@ -49,7 +49,7 @@ export const services: ServiceConfig[] = [
     ctaDescription: "I nostri esperti in diritto dell'immigrazione ti assisteranno in ogni fase della pratica, dalla consulenza preliminare alla presentazione di eventuali ricorsi.",
     ctaPrimaryText: "Consulenza Immigrazione Gratuita",
     ctaSecondaryText: "Chiama per Info Immediate",
-    phoneNumber: "+39 0923 123 456",
+    phoneNumber: "+39 329 336 6330",
     responseTime: "24 ore",
     specialization: "Diritto dell'Immigrazione",
     content: `
@@ -110,7 +110,7 @@ export const services: ServiceConfig[] = [
     ctaDescription: "Il nostro team specializzato in diritto di famiglia ti offrirà supporto professionale e umano per tutelare i tuoi diritti e quelli dei tuoi figli.",
     ctaPrimaryText: "Consulenza Familiare Riservata",
     ctaSecondaryText: "Parliamo del Tuo Caso",
-    phoneNumber: "+39 0923 123 456",
+    phoneNumber: "+39 329 336 6330",
     responseTime: "12 ore",
     specialization: "Diritto di Famiglia",
     content: `
@@ -169,7 +169,7 @@ export const services: ServiceConfig[] = [
     ctaDescription: "I nostri esperti in diritto tributario ti assisteranno nella gestione di controversie fiscali e nella pianificazione tributaria strategica.",
     ctaPrimaryText: "Consulenza Tributaria Urgente",
     ctaSecondaryText: "Analisi Gratuita Cartelle",
-    phoneNumber: "+39 0923 123 456",
+    phoneNumber: "+39 329 336 6330",
     responseTime: "6 ore",
     specialization: "Diritto Tributario",
     content: `
@@ -227,7 +227,7 @@ export const services: ServiceConfig[] = [
     ctaDescription: "In materia penale il tempo è fondamentale. Il nostro team di penalisti ti garantirà una difesa tempestiva ed efficace in ogni fase del procedimento.",
     ctaPrimaryText: "Assistenza Penale Immediata",
     ctaSecondaryText: "Contatto Urgente 24/7",
-    phoneNumber: "+39 333 123 4567",
+    phoneNumber: "+39 329 336 6330",
     responseTime: "Immediata",
     specialization: "Diritto Penale",
     content: `
@@ -284,7 +284,7 @@ export const services: ServiceConfig[] = [
     ctaDescription: "Il nostro team specializzato in recupero crediti ti aiuterà a rientrare delle somme dovute con strategie mirate e procedure efficaci.",
     ctaPrimaryText: "Recupera i Tuoi Crediti Ora",
     ctaSecondaryText: "Valutazione Gratuita Credito",
-    phoneNumber: "+39 0923 123 456",
+    phoneNumber: "+39 329 336 6330",
     responseTime: "24 ore",
     specialization: "Recupero Crediti",
     content: `
@@ -344,7 +344,7 @@ export const services: ServiceConfig[] = [
     ctaDescription: "I nostri esperti in diritto del lavoro ti assisteranno per tutelare i tuoi diritti o quelli della tua azienda con strategie efficaci e soluzioni personalizzate.",
     ctaPrimaryText: "Consulenza Lavoro Specializzata",
     ctaSecondaryText: "Analisi Caso Lavorativo",
-    phoneNumber: "+39 0923 123 456",
+    phoneNumber: "+39 329 336 6330",
     responseTime: "24 ore",
     specialization: "Diritto del Lavoro",
     content: `
@@ -400,7 +400,7 @@ export const services: ServiceConfig[] = [
     ctaDescription: "Il nostro team ti supporterà nella gestione di controversie civili e nella redazione di contratti con competenza e professionalità.",
     ctaPrimaryText: "Consulenza Civile Completa",
     ctaSecondaryText: "Valutazione Pratica Civile",
-    phoneNumber: "+39 0923 123 456",
+    phoneNumber: "+39 329 336 6330",
     responseTime: "48 ore",
     specialization: "Diritto Civile",
     content: `
@@ -455,7 +455,7 @@ export const services: ServiceConfig[] = [
     ctaDescription: "La mediazione e negoziazione assistita offrono soluzioni rapide ed economiche. Il nostro team ti guiderà verso accordi vantaggiosi per tutte le parti.",
     ctaPrimaryText: "Risoluzione Alternativa Controversie",
     ctaSecondaryText: "Info su Mediazione",
-    phoneNumber: "+39 0923 123 456",
+    phoneNumber: "+39 329 336 6330",
     responseTime: "24 ore",
     specialization: "ADR e Mediazione",
     content: `
@@ -516,7 +516,7 @@ export const services: ServiceConfig[] = [
     ctaDescription: "Il nostro studio ti assisterà nelle procedure di volontaria giurisdizione con competenza e sensibilità, garantendo la tutela delle persone più vulnerabili.",
     ctaPrimaryText: "Consulenza Volontaria Giurisdizione",
     ctaSecondaryText: "Richiedi Parere Legale",
-    phoneNumber: "+39 0923 123 456",
+    phoneNumber: "+39 329 336 6330",
     responseTime: "48 ore",
     specialization: "Volontaria Giurisdizione",
     content: `
@@ -571,7 +571,7 @@ export const services: ServiceConfig[] = [
     ctaDescription: "Il nostro studio offre servizi specializzati di domiciliazione e assistenza per colleghi avvocati con presenza costante sul territorio siciliano.",
     ctaPrimaryText: "Servizi Professionali Specializzati",
     ctaSecondaryText: "Info Domiciliazione",
-    phoneNumber: "+39 0923 123 456",
+    phoneNumber: "+39 329 336 6330",
     responseTime: "Immediata",
     specialization: "Servizi Professionali",
     content: `

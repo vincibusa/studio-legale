@@ -78,11 +78,11 @@ export default function ContactPage() {
                 </div>
                 <div className="flex items-center gap-4">
                   <Mail className="h-6 w-6 text-[var(--accent-color)]" />
-                  <a href="mailto:info@jessicafici.it" className="hover:text-[var(--accent-color)] transition-colors">info@jessicafici.it</a>
+                  <a href="mailto:avv.jessicafici@gmail.com" className="hover:text-[var(--accent-color)] transition-colors">avv.jessicafici@gmail.com</a>
                 </div>
                 <div className="flex items-center gap-4">
                   <Phone className="h-6 w-6 text-[var(--accent-color)]" />
-                  <a href="tel:+390123456789" className="hover:text-[var(--accent-color)] transition-colors">+39 012 345 6789</a>
+                  <a href="tel:+393293366330" className="hover:text-[var(--accent-color)] transition-colors">+39 329 336 6330</a>
                 </div>
               </div>
             </motion.div>
