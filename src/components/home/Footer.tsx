@@ -41,7 +41,7 @@ export const Footer = () => {
           <div>
             <h4 className="font-bold text-lg text-white mb-4">Contatti</h4>
             <address className="not-italic text-gray-400 space-y-2 text-sm">
-              <p>Via Roma, 123<br />00100 Roma, Italia</p>
+              <p>Via Giovanni Pilati 2 - Trapani<br />Via Massimo D'Azeglio 50, Bagheria</p>
               <p>info@vincentipartners.it</p>
               <p>+39 012 345 6789</p>
             </address>
