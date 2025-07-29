@@ -208,7 +208,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                 </div>
                 <div className="flex items-center gap-2">
                   <Mail className="w-4 h-4" />
-                  <span>Email: info@studiolegale.it</span>
+                  <span>Email: avv.jessicafici@gmail.com</span>
                 </div>
               </div>
             </div>

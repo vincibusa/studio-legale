@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import {
   Sheet,
   SheetContent,
@@ -59,8 +60,15 @@ export const Header = () => {
       }}
     >
       <div className="container flex justify-between items-center">
-        <Link href="/" className="font-serif text-2xl font-bold text-white">
-          Studio Legale Jessica Fici
+        <Link href="/" className="flex items-center">
+          <Image 
+            src="/logo.png" 
+            alt="Studio Legale Jessica Fici" 
+            width={200} 
+            height={60} 
+            className="h-12 w-auto"
+            priority
+          />
         </Link>
         
         <nav className="hidden md:flex gap-6 items-center">
@@ -116,8 +124,15 @@ export const Header = () => {
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-[var(--dark-bg)] border-gray-700 p-0">
               <SheetHeader className="p-6">
-                <SheetTitle className="text-2xl font-bold font-serif text-white text-left">
-                  Studio Legale Jessica Fici
+                <SheetTitle className="text-left">
+                  <Image 
+                    src="/logo.png" 
+                    alt="Studio Legale Jessica Fici" 
+                    width={200} 
+                    height={60} 
+                    className="h-10 w-auto"
+                    priority
+                  />
                 </SheetTitle>
                 <SheetDescription className="sr-only">
                   Navigazione principale del sito

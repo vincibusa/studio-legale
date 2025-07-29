@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
+
 
 const sectionVariants = {
   hidden: { opacity: 0 },
@@ -11,17 +11,31 @@ const sectionVariants = {
   },
 };
 
-const textVariants = {
-  hidden: { opacity: 0, x: -30 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
 };
 
-const imageVariants = {
-  hidden: { opacity: 0, x: 30 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
+const titleVariants = {
+  hidden: { opacity: 0, y: -30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
 };
 
-export const QuoteSection = () => {
+export const CollaborationSection = () => {
+  const collaborations = [
+    {
+      title: "Avv. Simone Giardina",
+      description: "Specializzato in diritto tributario e amministrativo. Collaborazione strategica per servizi fiscali e amministrativi completi.",
+      color: "bg-blue-600"
+    },
+    {
+      title: "Avv. Dario Romano",
+      description: "Specializzato in diritto penale. Collaborazione per la difesa penale e consulenza in procedimenti giudiziari.",
+      color: "bg-green-600"
+    },
+
+  ];
+
   return (
     <section 
       className="py-24" 
@@ -29,35 +43,44 @@ export const QuoteSection = () => {
     >
       <div className="container">
         <motion.div
-          className="flex flex-col md:flex-row items-center gap-12"
+          className="text-center mb-16"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={titleVariants}
+        >
+          <h2 className="font-serif text-4xl md:text-5xl font-bold text-white mb-6">
+            Le Nostre Collaborazioni
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Lavoriamo con partner di eccellenza per offrire servizi legali completi e soluzioni personalizzate
+          </p>
+        </motion.div>
+
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={sectionVariants}
         >
-          <motion.div className="flex-1" variants={textVariants}>
-            <div className="flex items-start">
-              <div className="w-1 h-36 bg-[var(--accent-color)] mr-8 mt-2 flex-shrink-0"></div>
-              <blockquote
-                className="font-serif text-4xl md:text-5xl font-normal text-white"
-              >
-                "Non aspiriamo ad essere i più grandi.
-                <br />
-                Solo i migliori"
-              </blockquote>
-            </div>
-          </motion.div>
-          
-          <motion.div className="flex-1" variants={imageVariants}>
-            <Image
-              src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2071&auto=format&fit=crop"
-              alt="Scalinata in bianco e nero di un palazzo storico"
-              width={600}
-              height={750}
-              className="w-full h-auto grayscale"
-            />
-          </motion.div>
+          {collaborations.map((collab, index) => (
+            <motion.div
+              key={index}
+              className="bg-gray-800 rounded-lg p-8 text-center hover:bg-gray-700 transition-all duration-300 hover:scale-105"
+              variants={cardVariants}
+            >
+              <h3 className="text-xl font-bold text-white mb-4">
+                {collab.title}
+              </h3>
+              <p className="text-gray-300 text-sm leading-relaxed">
+                {collab.description}
+              </p>
+            </motion.div>
+          ))}
         </motion.div>
+
+
       </div>
     </section>
   );

@@ -23,64 +23,63 @@ export interface ServiceConfig {
 
 export const services: ServiceConfig[] = [
   {
-    slug: "immigrazione-cittadinanza",
-    imageUrl: "/immigrazione.jpg",
-    heroImage: "/immigrazione.jpg",
-    title: "Immigrazione e Cittadinanza",
-    shortDescription: "Assistenza legale completa per visti, permessi di soggiorno e cittadinanza italiana.",
+    slug: "recupero-crediti",
+    imageUrl: "/recupero-crediti.jpg",
+    heroImage: "/recupero-crediti.jpg",
+    title: "Recupero Crediti",
+    shortDescription: "Tutela dei crediti e procedure esecutive per professionisti, aziende e privati.",
     features: [
       {
-        icon: "Clock",
-        title: "Tempi di Rilascio Chiari",
-        description: "Ti informiamo sui tempi effettivi (30-90 giorni per visti)"
+        icon: "Search",
+        title: "Indagini Patrimoniali",
+        description: "Verifica preventiva della solvibilità del debitore"
       },
       {
-        icon: "FileText",
-        title: "Documentazione Completa",
-        description: "Assistenza nella preparazione di tutti i documenti richiesti"
+        icon: "Gavel",
+        title: "Azioni Esecutive",
+        description: "Pignoramenti e procedure di recupero efficaci"
       },
       {
-        icon: "Users",
-        title: "Specialisti in Immigrazione",
-        description: "Team dedicato con esperienza consolidata nel settore"
+        icon: "TrendingUp",
+        title: "Recupero Garantito",
+        description: "Massima trasparenza su tempi, costi e risultati"
       }
     ],
-    ctaTitle: "Hai bisogno di assistenza per immigrazione o cittadinanza?",
-    ctaDescription: "I nostri esperti in diritto dell'immigrazione ti assisteranno in ogni fase della pratica, dalla consulenza preliminare alla presentazione di eventuali ricorsi.",
-    ctaPrimaryText: "Consulenza Immigrazione Gratuita",
-    ctaSecondaryText: "Chiama per Info Immediate",
+    ctaTitle: "Hai crediti da recuperare? Non aspettare oltre!",
+    ctaDescription: "Il nostro team specializzato in recupero crediti ti aiuterà a rientrare delle somme dovute con strategie mirate e procedure efficaci.",
+    ctaPrimaryText: "Recupera i Tuoi Crediti Ora",
+    ctaSecondaryText: "Valutazione Gratuita Credito",
     phoneNumber: "+39 329 336 6330",
     responseTime: "24 ore",
-    specialization: "Diritto dell'Immigrazione",
+    specialization: "Recupero Crediti",
     content: `
-      <h2>🇮🇹 Immigrazione e cittadinanza italiana</h2>
-      <p>L'Italia è tra le mete più ambite per studio, lavoro o ricongiungimento familiare. Conoscere le normative su visti, permessi di soggiorno e cittadinanza italiana è essenziale per evitare errori burocratici che potrebbero compromettere la tua permanenza o il tuo progetto di vita.</p>
+      <h2>🔷 RECUPERO CREDITI</h2>
+      <h3>💰 Tutela dei crediti e procedure esecutive</h3>
+      <p>Lo Studio offre servizi completi di recupero crediti, assistendo professionisti, aziende e privati per garantire il soddisfacimento dei propri diritti in tempi rapidi.</p>
       
-      <h3>🛂 Immigrazione in Italia</h3>
-      
-      <h4>🔹 Visti per ingresso in Italia</h4>
-      <p>Il visto è l'autorizzazione rilasciata dal Consolato italiano nel paese di origine che consente l'ingresso in Italia per un periodo determinato. Le tipologie principali sono:</p>
+      <h4>✅ Aree di attività</h4>
       <ul>
-        <li><strong>Visto per studio:</strong> per frequentare corsi universitari o professionali riconosciuti</li>
-        <li><strong>Visto per lavoro subordinato:</strong> in presenza di un contratto di lavoro e nulla osta dello Sportello Unico per l'Immigrazione</li>
-        <li><strong>Visto per lavoro autonomo:</strong> per professionisti con requisiti specifici o titolari di partita IVA</li>
-        <li><strong>Visto per ricongiungimento familiare:</strong> per familiari stretti di cittadini extra-UE regolarmente soggiornanti</li>
-      </ul>
-      <p><strong>👉 Tempi di rilascio:</strong> variano da 30 a 90 giorni, in base al visto richiesto e al Consolato competente.</p>
-      
-      <h4>🔹 Permesso di soggiorno</h4>
-      <p>Il permesso di soggiorno è il documento che consente di soggiornare legalmente in Italia oltre i 90 giorni del visto turistico. Va richiesto entro 8 giorni dall'ingresso.</p>
-      
-      <h4>🔹 Cittadinanza italiana</h4>
-      <p>Assistiamo i clienti in tutti i procedimenti per l'ottenimento della cittadinanza italiana:</p>
-      <ul>
-        <li>Cittadinanza per nascita o diritto di sangue (Ius sanguinis)</li>
-        <li>Cittadinanza per matrimonio</li>
-        <li>Cittadinanza per residenza</li>
+        <li>Redazione solleciti e diffide di pagamento</li>
+        <li>Decreti ingiuntivi e procedimenti monitori</li>
+        <li>Pignoramenti mobiliari, immobiliari e presso terzi</li>
+        <li>Azioni esecutive e cautelari</li>
+        <li>Accordi stragiudiziali e piani di rientro</li>
       </ul>
       
-      <p><strong>📞 Hai bisogno di supporto per il tuo permesso di soggiorno o per la cittadinanza italiana?</strong><br>
-      I nostri avvocati esperti in diritto dell'immigrazione e cittadinanza ti assisteranno in ogni fase della pratica.</p>
+      <h4>💬 Come possiamo aiutarti</h4>
+      <ul>
+        <li>Analisi preventiva della solvibilità del debitore</li>
+        <li>Consulenza strategica sul miglior strumento di recupero</li>
+        <li>Gestione completa del contenzioso</li>
+        <li>Massima trasparenza su tempi e costi</li>
+      </ul>
+      
+      <h4>📋 Attività stragiudiziale</h4>
+      <p>La consulenza e le attività stragiudiziali di recupero dei crediti sono sempre state tra le materie di quotidiana trattazione. L'esperienza pluridecennale ci consente di esaminare gli aspetti specifici di ogni rapporto creditorio e di fornire tempestivamente un parere legale sull'effettiva recuperabilità del credito.</p>
+      
+      <p>Le attività di disamina preventiva comprendono una verifica approfondita sul soggetto debitore nonché mirate indagini patrimoniali.</p>
+      
+      <p>Se desideri recuperare un credito in modo rapido ed efficace, contatta il nostro Studio per ricevere assistenza legale mirata.</p>
     `
   },
   {
@@ -142,6 +141,68 @@ export const services: ServiceConfig[] = [
       <p>Se stai affrontando una problematica familiare o desideri tutelare al meglio i tuoi diritti e quelli dei tuoi figli, contattaci oggi stesso per ricevere una consulenza riservata e personalizzata.</p>
     `
   },
+  {
+    slug: "immigrazione-cittadinanza",
+    imageUrl: "/immigrazione.jpg",
+    heroImage: "/immigrazione.jpg",
+    title: "Immigrazione e Cittadinanza",
+    shortDescription: "Assistenza legale completa per visti, permessi di soggiorno e cittadinanza italiana.",
+    features: [
+      {
+        icon: "Clock",
+        title: "Tempi di Rilascio Chiari",
+        description: "Ti informiamo sui tempi effettivi (30-90 giorni per visti)"
+      },
+      {
+        icon: "FileText",
+        title: "Documentazione Completa",
+        description: "Assistenza nella preparazione di tutti i documenti richiesti"
+      },
+      {
+        icon: "Users",
+        title: "Specialisti in Immigrazione",
+        description: "Team dedicato con esperienza consolidata nel settore"
+      }
+    ],
+    ctaTitle: "Hai bisogno di assistenza per immigrazione o cittadinanza?",
+    ctaDescription: "I nostri esperti in diritto dell'immigrazione ti assisteranno in ogni fase della pratica, dalla consulenza preliminare alla presentazione di eventuali ricorsi.",
+    ctaPrimaryText: "Consulenza Immigrazione Gratuita",
+    ctaSecondaryText: "Chiama per Info Immediate",
+    phoneNumber: "+39 329 336 6330",
+    responseTime: "24 ore",
+    specialization: "Diritto dell'Immigrazione",
+    content: `
+      <h2>🇮🇹 Immigrazione e cittadinanza italiana</h2>
+      <p>L'Italia è tra le mete più ambite per studio, lavoro o ricongiungimento familiare. Conoscere le normative su visti, permessi di soggiorno e cittadinanza italiana è essenziale per evitare errori burocratici che potrebbero compromettere la tua permanenza o il tuo progetto di vita.</p>
+      
+      <h3>🛂 Immigrazione in Italia</h3>
+      
+      <h4>🔹 Visti per ingresso in Italia</h4>
+      <p>Il visto è l'autorizzazione rilasciata dal Consolato italiano nel paese di origine che consente l'ingresso in Italia per un periodo determinato. Le tipologie principali sono:</p>
+      <ul>
+        <li><strong>Visto per studio:</strong> per frequentare corsi universitari o professionali riconosciuti</li>
+        <li><strong>Visto per lavoro subordinato:</strong> in presenza di un contratto di lavoro e nulla osta dello Sportello Unico per l'Immigrazione</li>
+        <li><strong>Visto per lavoro autonomo:</strong> per professionisti con requisiti specifici o titolari di partita IVA</li>
+        <li><strong>Visto per ricongiungimento familiare:</strong> per familiari stretti di cittadini extra-UE regolarmente soggiornanti</li>
+      </ul>
+      <p><strong>👉 Tempi di rilascio:</strong> variano da 30 a 90 giorni, in base al visto richiesto e al Consolato competente.</p>
+      
+      <h4>🔹 Permesso di soggiorno</h4>
+      <p>Il permesso di soggiorno è il documento che consente di soggiornare legalmente in Italia oltre i 90 giorni del visto turistico. Va richiesto entro 8 giorni dall'ingresso.</p>
+      
+      <h4>🔹 Cittadinanza italiana</h4>
+      <p>Assistiamo i clienti in tutti i procedimenti per l'ottenimento della cittadinanza italiana:</p>
+      <ul>
+        <li>Cittadinanza per nascita o diritto di sangue (Ius sanguinis)</li>
+        <li>Cittadinanza per matrimonio</li>
+        <li>Cittadinanza per residenza</li>
+      </ul>
+      
+      <p><strong>📞 Hai bisogno di supporto per il tuo permesso di soggiorno o per la cittadinanza italiana?</strong><br>
+      I nostri avvocati esperti in diritto dell'immigrazione e cittadinanza ti assisteranno in ogni fase della pratica.</p>
+    `
+  },
+
   {
     slug: "diritto-tributario",
     imageUrl: "/diritto-tributario.jpg",
@@ -257,66 +318,7 @@ export const services: ServiceConfig[] = [
       <p><strong>Se sei indagato o imputato per un reato o desideri sporgere querela, contatta subito il nostro Studio per una difesa tempestiva ed efficace.</strong></p>
     `
   },
-  {
-    slug: "recupero-crediti",
-    imageUrl: "/recupero-crediti.jpg",
-    heroImage: "/recupero-crediti.jpg",
-    title: "Recupero Crediti",
-    shortDescription: "Tutela dei crediti e procedure esecutive per professionisti, aziende e privati.",
-    features: [
-      {
-        icon: "Search",
-        title: "Indagini Patrimoniali",
-        description: "Verifica preventiva della solvibilità del debitore"
-      },
-      {
-        icon: "Gavel",
-        title: "Azioni Esecutive",
-        description: "Pignoramenti e procedure di recupero efficaci"
-      },
-      {
-        icon: "TrendingUp",
-        title: "Recupero Garantito",
-        description: "Massima trasparenza su tempi, costi e risultati"
-      }
-    ],
-    ctaTitle: "Hai crediti da recuperare? Non aspettare oltre!",
-    ctaDescription: "Il nostro team specializzato in recupero crediti ti aiuterà a rientrare delle somme dovute con strategie mirate e procedure efficaci.",
-    ctaPrimaryText: "Recupera i Tuoi Crediti Ora",
-    ctaSecondaryText: "Valutazione Gratuita Credito",
-    phoneNumber: "+39 329 336 6330",
-    responseTime: "24 ore",
-    specialization: "Recupero Crediti",
-    content: `
-      <h2>🔷 RECUPERO CREDITI</h2>
-      <h3>💰 Tutela dei crediti e procedure esecutive</h3>
-      <p>Lo Studio offre servizi completi di recupero crediti, assistendo professionisti, aziende e privati per garantire il soddisfacimento dei propri diritti in tempi rapidi.</p>
-      
-      <h4>✅ Aree di attività</h4>
-      <ul>
-        <li>Redazione solleciti e diffide di pagamento</li>
-        <li>Decreti ingiuntivi e procedimenti monitori</li>
-        <li>Pignoramenti mobiliari, immobiliari e presso terzi</li>
-        <li>Azioni esecutive e cautelari</li>
-        <li>Accordi stragiudiziali e piani di rientro</li>
-      </ul>
-      
-      <h4>💬 Come possiamo aiutarti</h4>
-      <ul>
-        <li>Analisi preventiva della solvibilità del debitore</li>
-        <li>Consulenza strategica sul miglior strumento di recupero</li>
-        <li>Gestione completa del contenzioso</li>
-        <li>Massima trasparenza su tempi e costi</li>
-      </ul>
-      
-      <h4>📋 Attività stragiudiziale</h4>
-      <p>La consulenza e le attività stragiudiziali di recupero dei crediti sono sempre state tra le materie di quotidiana trattazione. L'esperienza pluridecennale ci consente di esaminare gli aspetti specifici di ogni rapporto creditorio e di fornire tempestivamente un parere legale sull'effettiva recuperabilità del credito.</p>
-      
-      <p>Le attività di disamina preventiva comprendono una verifica approfondita sul soggetto debitore nonché mirate indagini patrimoniali.</p>
-      
-      <p>Se desideri recuperare un credito in modo rapido ed efficace, contatta il nostro Studio per ricevere assistenza legale mirata.</p>
-    `
-  },
+
   {
     slug: "diritto-lavoro",
     imageUrl: "/sicurezza-lavoro.jpg",

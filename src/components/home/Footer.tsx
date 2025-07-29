@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { navLinks } from "./links";
 
 export const Footer = () => {
@@ -15,8 +16,15 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-10">
           {/* Column 1: Logo & Tagline */}
           <div className="md:col-span-1">
-            <Link href="/" className="font-serif text-2xl font-bold text-white mb-4 block">
-              Studio Legale Jessica Fici
+            <Link href="/" className="block mb-4">
+              <Image 
+                src="/logo.png" 
+                alt="Studio Legale Jessica Fici" 
+                width={250} 
+                height={75} 
+                className="h-16 w-auto"
+                priority
+              />
             </Link>
             <p className="text-gray-400 text-sm">
               L'eccellenza legale per l'eccellenza aziendale.
@@ -51,7 +59,7 @@ export const Footer = () => {
           <div>
             <h4 className="font-bold text-lg text-white mb-4">Seguici</h4>
              <Link 
-              href="https://www.linkedin.com/company/vincenti-partners" 
+              href="https://www.linkedin.com/in/avv-jessica-fici-93b16a126?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" 
               className="text-white border border-white px-4 py-2 text-sm font-bold transition-all duration-300 hover:bg-white hover:text-[var(--dark-bg)] inline-block"
               target="_blank"
               rel="noopener noreferrer"
