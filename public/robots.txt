@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+
+# Allow crawling of all content for major search engines
+Allow: /aree-di-attivita/
+Allow: /contatti/
+Allow: /blog/
+
+# Sitemap location
+Sitemap: https://www.studiolegalejessicafici.it/sitemap.xml

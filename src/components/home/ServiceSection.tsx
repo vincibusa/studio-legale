@@ -53,9 +53,12 @@ export const ServiceSection = () => {
           viewport={{ once: true, amount: 0.3 }}
           variants={sectionVariants}
         >
-          <h3 className="font-serif text-3xl font-normal text-white mb-4">
-            Aree di attività
-          </h3>
+          <h2 className="font-serif text-4xl font-normal text-white mb-4">
+            Le Nostre Aree di Attività Legale
+          </h2>
+          <p className="text-lg text-white/80 mb-6">
+            Consulenza e assistenza specializzata in diritto di famiglia, immigrazione, recupero crediti e molto altro
+          </p>
           <div className="accent-line"></div>
         </motion.div>
 
@@ -75,12 +78,14 @@ export const ServiceSection = () => {
                       alt={service.title}
                       fill
                       className="object-cover transition-all duration-400"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-black/50" />
                     <div className="absolute bottom-0 left-0 right-0 p-5 text-white">
-                      <h4 className="font-serif text-xl font-normal mb-2">
+                      <h3 className="font-serif text-xl font-normal mb-2">
                         {service.title}
-                      </h4>
+                      </h3>
                       <div 
                         className="h-0.5 bg-[var(--accent-color)] transition-all duration-400 group-hover/card:w-20"
                         style={{ width: '40px' }}

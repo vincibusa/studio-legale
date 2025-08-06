@@ -55,10 +55,12 @@ export const HeroSection = () => {
           La vostra tutela legale è
         </motion.p>
         <motion.h1
-          className="font-serif text-6xl md:text-8xl font-normal text-white"
+          className="font-serif text-5xl md:text-7xl font-normal text-white leading-tight"
           variants={itemVariants}
         >
-          La nostra priorità
+          Studio Legale Jessica Fici
+          <br />
+
         </motion.h1>
       </motion.div>
       

@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft, Phone, Mail } from 'lucide-react';
 import { DynamicIcon } from '@/components/ui/dynamic-icon';
 import Link from 'next/link';
+import type { Metadata } from 'next';
 
 export default async function ServiceDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -30,8 +31,56 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
   const contentSections = parseContent(service.content);
 
+  // Schema markup for service
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "name": `${service.title} - Studio Legale Jessica Fici`,
+    "description": service.shortDescription,
+    "image": `https://www.studiolegalejessicafici.it${service.heroImage}`,
+    "url": `https://www.studiolegalejessicafici.it/aree-di-attivita/${service.slug}`,
+    "provider": {
+      "@type": "LegalService",
+      "name": "Studio Legale Jessica Fici",
+      "telephone": "+39 329 336 6330",
+      "email": "avv.jessicafici@gmail.com",
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "Via Massimo D'Azeglio 50",
+          "addressLocality": "Bagheria",
+          "addressRegion": "PA",
+          "postalCode": "90011",
+          "addressCountry": "IT"
+        },
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "Via Giovanni Pilati 2",
+          "addressLocality": "Trapani",
+          "addressRegion": "TP",
+          "postalCode": "91100",
+          "addressCountry": "IT"
+        }
+      ]
+    },
+    "serviceType": service.title,
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": service.title,
+      "itemListElement": service.features.map((feature) => ({
+        "@type": "Offer",
+        "name": feature.title,
+        "description": feature.description
+      }))
+    }
+  };
+
   return (
     <div className="-mt-[84px]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       {/* Hero Section */}
       <section 
         className="relative h-[70vh] flex items-center"
@@ -43,6 +92,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             alt={service.title}
             fill
             className="object-cover"
+            priority
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/40" />
         </div>
@@ -57,8 +107,12 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
               Torna alle aree di attività
             </Link>
             
-            <h1 className="font-serif text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="font-serif text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
               {service.title}
+              <br />
+              <span className="text-2xl md:text-3xl text-[var(--accent-color)] font-normal">
+                Avvocato Specializzato a Bagheria e Trapani
+              </span>
             </h1>
             
             <div className="accent-line mb-6"></div>
@@ -219,6 +273,100 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
       <ContactSection />
     </div>
   );
+}
+
+// Generate dynamic metadata for SEO
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const service = services.find((s) => s.slug === slug);
+  
+  if (!service) {
+    return {
+      title: "Servizio non trovato",
+      description: "Il servizio richiesto non è disponibile.",
+    };
+  }
+
+  const baseUrl = "https://www.studiolegalejessicafici.it";
+  
+  // Meta titles and descriptions optimized for each service
+  const metaDataMap: Record<string, { title: string; description: string; keywords: string[] }> = {
+    "diritto-di-famiglia": {
+      title: "Avvocato Diritto di Famiglia Bagheria | Separazione, Divorzio, Affidamento Figli - Studio Legale Jessica Fici",
+      description: "Avvocato specializzato in diritto di famiglia a Bagheria (PA) e Trapani. Assistenza per separazioni, divorzi, affidamento figli e mantenimento. Consulenza riservata e professionale. Prenota ora.",
+      keywords: ["avvocato diritto di famiglia bagheria", "studio legale bagheria", "separazione consensuale palermo", "divorzio bagheria", "affidamento figli trapani", "avvocato divorzista palermo"]
+    },
+    "recupero-crediti": {
+      title: "Recupero Crediti Aziendali e Privati Bagheria | Avvocato Specializzato - Studio Jessica Fici",
+      description: "Recupero crediti rapido ed efficace per privati e aziende a Bagheria e Trapani. Azioni stragiudiziali e giudiziali. Nessun anticipo, pagamento solo a recupero effettuato.",
+      keywords: ["recupero crediti bagheria", "recupero crediti trapani", "recupero crediti aziendali palermo", "avvocato recupero crediti bagheria", "procedure esecutive trapani"]
+    },
+    "immigrazione-e-cittadinanza": {
+      title: "Avvocato Immigrazione Bagheria | Cittadinanza, Permesso di Soggiorno, Ricongiungimento - Studio Fici",
+      description: "Avvocato specializzato in diritto di immigrazione a Bagheria (PA) e Trapani. Assistenza per cittadinanza italiana, permessi di soggiorno, ricongiungimento familiare. Consulenza gratuita.",
+      keywords: ["avvocato immigrazione bagheria", "cittadinanza italiana palermo", "permesso di soggiorno trapani", "ricongiungimento familiare bagheria", "asilo politico palermo"]
+    },
+    "diritto-tributario": {
+      title: "Avvocato Tributarista Bagheria | Controversie Fiscali, Cartelle Esattoriali - Studio Legale",
+      description: "Avvocato tributarista a Bagheria e Trapani per controversie fiscali e cartelle esattoriali. Assistenza in accertamenti, avvisi di accertamento, riscossione. Ricorso tributario.",
+      keywords: ["avvocato tributarista bagheria", "controversie fiscali palermo", "cartella esattoriale trapani", "ricorso tributario bagheria", "accertamento fiscale palermo"]
+    },
+    "diritto-penale": {
+      title: "Avvocato Penalista Bagheria | Difesa Penale, Reati Informatici - Studio Jessica Fici",
+      description: "Avvocato penalista a Bagheria e Trapani per difesa in procedimenti penali. Assistenza per reati informatici, truffe, difesa d'ufficio. Consulenza immediata e riservata.",
+      keywords: ["avvocato penalista bagheria", "difesa penale trapani", "reati informatici palermo", "truffa bagheria", "difesa d'ufficio palermo"]
+    },
+    "diritto-del-lavoro": {
+      title: "Avvocato Diritto del Lavoro Bagheria | Licenziamento, Vertenze - Studio Legale",
+      description: "Avvocato specializzato in diritto del lavoro a Bagheria e Trapani. Assistenza per licenziamenti, vertenze sindacali, diritto dei lavoratori. Consulenza gratuita.",
+      keywords: ["avvocato diritto del lavoro bagheria", "licenziamento illegittimo trapani", "vertenza lavoro palermo", "diritti lavoratori bagheria", "consulenza lavoro trapani"]
+    },
+    "mediazione-e-negoziazione-assistita": {
+      title: "Mediazione Civile Bagheria | Negoziazione Assistita - Studio Legale Jessica Fici",
+      description: "Mediazione civile e negoziazione assistita a Bagheria e Trapani per risolvere controversie in modo rapido ed economico. Avvocato mediatore qualificato. Consulenza gratuita.",
+      keywords: ["mediazione civile bagheria", "negoziazione assistita trapani", "mediatore qualificato palermo", "risoluzione controversie bagheria", "ADR trapani"]
+    },
+    "volontaria-giurisdizione": {
+      title: "Volontaria Giurisdizione Bagheria | Amministratore di Sostegno - Studio Fici",
+      description: "Assistenza in volontaria giurisdizione a Bagheria e Trapani: amministratore di sostegno, interdizione, tutela minori. Consulenza legale per protezione persone vulnerabili.",
+      keywords: ["volontaria giurisdizione bagheria", "amministratore di sostegno trapani", "interdizione palermo", "tutela minori bagheria", "protezione persone vulnerabili trapani"]
+    }
+  };
+
+  const meta = metaDataMap[slug] || {
+    title: `${service.title} - Studio Legale Jessica Fici Bagheria e Trapani`,
+    description: service.shortDescription,
+    keywords: [service.title.toLowerCase(), "studio legale bagheria", "studio legale trapani", "avvocato specializzato"]
+  };
+
+  return {
+    title: meta.title,
+    description: meta.description,
+    keywords: meta.keywords,
+    authors: [{ name: "Avv. Jessica Fici" }],
+    openGraph: {
+      title: meta.title,
+      description: meta.description,
+      type: "website",
+      locale: "it_IT",
+      url: `${baseUrl}/aree-di-attivita/${slug}`,
+      images: [{
+        url: service.heroImage,
+        width: 1200,
+        height: 630,
+        alt: service.title
+      }]
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: meta.title,
+      description: meta.description,
+      images: [service.heroImage]
+    },
+    alternates: {
+      canonical: `${baseUrl}/aree-di-attivita/${slug}`
+    }
+  };
 }
 
 // Generate static paths for all services
